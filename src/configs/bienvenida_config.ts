@@ -4,6 +4,7 @@ export type NavLink = {
   hidden?: boolean
   children?: { label: string; href: string }[]
 }
+export type Language = keyof typeof BienvenidaConfig
 
 export const BienvenidaConfig = {
   en: {
