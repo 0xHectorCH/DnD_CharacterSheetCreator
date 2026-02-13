@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react"
 import db from "../../../public/data/db_en.json"
-import type { Spell } from "../../configs/rules_config"
+import type { Spell } from "../../types/rules_types"
 import Card from "../../components/ui/card"
 
 type FilterMode = "none" | "class" | "level" | "school"

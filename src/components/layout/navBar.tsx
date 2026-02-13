@@ -1,6 +1,8 @@
 //Importaremos el navbar en prácticamente todos los views. Esta es la versión española.
 import { navConfig } from "../../configs/navBar_config"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { getCurrentUser, logout } from "../../services/auth/authService"
 
 type Language = "en" | "es"
 
@@ -11,16 +13,28 @@ interface NavbarProps {
 
 export default function Navbar({ 
   lang = "en" ,
-  onLanguageChange,
+  // onLanguageChange,
   }: NavbarProps) {
   const content = navConfig[lang]
+  const navigate = useNavigate()
 
-  const handleLanguageChange = (newLang: Language) => {
-    if (onLanguageChange) {
-      onLanguageChange(newLang)
+    const [user, setUser] = useState(getCurrentUser())
+
+    useEffect(() => {
+      setUser(getCurrentUser())
+    }, [])
+
+    const handleLogout = () => {
+      logout()
+      setUser(null)
+      navigate("/")
     }
-    // mas tarfe: window.location.reload() o router logic
-  }
+
+    // const handleLanguageChange = (newLang: Language) => {
+    //   if (onLanguageChange) {
+    //     onLanguageChange(newLang)
+    //   }
+    // }
   return (
     <nav className="w-full bg-linear-to-r from-[#1a0f0f]
      via-[#2a1414] to-[#1a0f0f] border-b border-red-900/40">
@@ -76,21 +90,23 @@ export default function Navbar({
             </a> 
             Desarrollar despues de entrega
             */}
-
-            <a href="/about" className="transition-colors duration-500 hover:text-red-600">
-              {content.about}
-            </a>
+          {user && (
+            <Link to="/underDevelopment" className="transition-colors duration-500 hover:text-red-600">
+              {content.myCharacter}
+            </Link>
+          )}
           </div>
+
           {/* NavBar derecho */}
-           {/* Right – Language + Sign in */}
+
           <div className="flex items-center gap-6 text-white text-lg">
 
             {/* Language selector */}
-            <div className="relative group">
+            {/* <div className="relative group">
               <button className="transition-colors duration-500 hover:text-red-600">
-                🌍 {/* poner la bandera del idioma actual en vez del planetita */}
+                🌍
               </button>
-
+              //gestionar idiomas mas tarde
               <div className="absolute right-0 top-full z-20 mt-3 hidden
                 rounded-xl bg-linear-to-b from-[#2a1414] to-[#1a0f0f]
                 border border-red-900/50 shadow-xl group-hover:block">
@@ -109,14 +125,29 @@ export default function Navbar({
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> */}
 
             {/* Sign in */}
-            <Link to="/auth?auth=signIn" className=" rounded-lg border border-red-700 px-4 py-1.5
+            {!user ? (
+              <Link
+                to="/auth?auth=signIn"
+                className="rounded-lg border border-red-700 px-4 py-1.5
                 transition-all duration-500 hover:bg-red-700 hover:text-white">
-              {content.signIn}
-            </Link>
-
+                {content.signIn}
+              </Link>
+            ) : (
+              <div className="flex items-center gap-4">
+                <span className="text-sm text-neutral-300">
+                  {user.name}
+                </span>
+                <button
+                  onClick={handleLogout}
+                  className="rounded-lg border border-red-700 px-4 py-1.5
+                  transition-all duration-500 hover:bg-red-700 hover:text-white">
+                  Logout
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>

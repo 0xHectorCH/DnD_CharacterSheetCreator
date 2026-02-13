@@ -14,8 +14,8 @@ export const navConfig = {
     classes: "Classes",
     spells: "Spells",
     dice: "Throw a Die",
-    about: "About Us",
-    signIn: "Sign In"
+    signIn: "Sign In",
+    myCharacter: "My Characters"
   },
   es: {
     home: "Inicio",
@@ -25,7 +25,7 @@ export const navConfig = {
     classes: "Clases",
     spells: "Conjuros",
     dice: "Tirar un Dado",
-    about: "Sobre Nosotros",
-    signIn: "Iniciar sesión"
+    signIn: "Iniciar sesión",
+    myCharacter: "Mis Personajes"
   },
 }

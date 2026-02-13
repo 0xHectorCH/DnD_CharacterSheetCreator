@@ -1,6 +1,6 @@
 import Card from "../../components/ui/card"
 import db from "../../../public/data/db_en.json"
-import type { Class } from "../../configs/rules_config"
+import type { Class } from "../../types/rules_types"
 
 export default function ClassesPage() {
   const classes = db.classes.slice(0, 15)
