@@ -68,11 +68,13 @@ export default function SpellsPage() {
 
     if (mode === "none") {
         return (
-        <div className="p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card title="By Class" onClick={() => setMode("class")} />
-            <Card title="By Level" onClick={() => setMode("level")} />
-            <Card title="By School" onClick={() => setMode("school")} />
-        </div>
+        <section className="min-h-screen w-full bg-neutral-800 py-8">
+            <div className="p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <Card title="By Class" onClick={() => setMode("class")} />
+                <Card title="By Level" onClick={() => setMode("level")} />
+                <Card title="By School" onClick={() => setMode("school")} />
+            </div>
+        </section>
         )
     }
 
@@ -80,55 +82,63 @@ export default function SpellsPage() {
         const levels = Array.from({ length: 10 }, (_, i) => i)
 
         return (
-        <div className="p-8">
-            <button onClick={() => {
-            setSelectedValue(null)
-            setMode("none")
-            }} className="mb-6 px-4 py-2 bg-red-600 rounded">
-            Back
-            </button>
-            <div className="p-8 grid grid-cols-2 md:grid-cols-5 gap-4">
-                {levels.map(level => (
-                <Card
-                    key={level}
-                    title={level === 0 ? "Cantrips" : `Level ${level}`}
-                    onClick={() => setSelectedValue(level)}
-                />
-                ))}
+        <section className="min-h-screen w-full bg-neutral-800 py-8">
+            <div className="p-8">
+                <button onClick={() => {
+                setSelectedValue(null)
+                setMode("none")
+                }} className="mb-6 px-4 py-2 bg-linear-to-r from-[#1a0f0f]
+     via-[#2a1414] to-[#1a0f0f] text-neutral-50 rounded">
+                Back
+                </button>
+                <div className="p-8 grid grid-cols-2 md:grid-cols-5 gap-4">
+                    {levels.map(level => (
+                    <Card
+                        key={level}
+                        title={level === 0 ? "Cantrips" : `Level ${level}`}
+                        onClick={() => setSelectedValue(level)}
+                    />
+                    ))}
+                </div>
             </div>
-        </div>
+        </section>
         )
     }
 
     if (mode === "school" && selectedValue === null) {
         return (
-        <div className="p-8">
-            <button onClick={() => {
-            setSelectedValue(null)
-            setMode("none")
-            }} className="mb-6 px-4 py-2 bg-red-600 rounded">
-            Back
-            </button>
-            <div className="p-8 grid grid-cols-2 md:grid-cols-4 gap-4">
-            {schools.map(school => (
-            <Card
-                key={school}
-                title={school}
-                onClick={() => setSelectedValue(school)}
-            />
-            ))}
+        <section className="min-h-screen w-full bg-neutral-800 py-8">
+            <div className="p-8">
+                <button onClick={() => {
+                setSelectedValue(null)
+                setMode("none")
+                }} className="mb-6 px-4 py-2 bg-linear-to-r from-[#1a0f0f]
+     via-[#2a1414] to-[#1a0f0f] text-neutral-50 rounded">
+                Back
+                </button>
+                <div className="p-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+                {schools.map(school => (
+                <Card
+                    key={school}
+                    title={school}
+                    onClick={() => setSelectedValue(school)}
+                />
+                ))}
+                </div>
             </div>
-        </div>
+        </section>
         )
     }
 
     if (mode === "class" && selectedValue === null) {
         return (
+        <section className="min-h-screen w-full bg-neutral-800 py-8">
         <div className="p-8">
             <button onClick={() => {
             setSelectedValue(null)
             setMode("none")
-            }} className="mb-6 px-4 py-2 bg-red-600 rounded">
+            }} className="mb-6 px-4 py-2 bg-linear-to-r from-[#1a0f0f]
+     via-[#2a1414] to-[#1a0f0f] text-neutral-50 rounded">
             Back
             </button>
             <div className="p-8 grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -141,27 +151,31 @@ export default function SpellsPage() {
                 ))}
             </div>
         </div>
+        </section>
         )
     }
 
     // Final result screen
     return (
-        <div className="p-8">
-        <button onClick={() => {
-            setSelectedValue(null)
-        }} className="mb-6 px-4 py-2 bg-red-600 rounded">
-            Back
-        </button>
+        <section className="min-h-screen w-full bg-neutral-800 py-8">
+            <div className="p-8">
+                <button onClick={() => {
+                    setSelectedValue(null)
+                }} className="mb-6 px-4 py-2 bg-linear-to-r from-[#1a0f0f]
+     via-[#2a1414] to-[#1a0f0f] text-neutral-50 rounded ">
+                    Back
+                </button>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {filteredSpells.map(spell => (
-            <Card
-                key={spell.id}
-                title={spell.name}
-                description={spell.description}
-            />
-            ))}
-        </div>
-        </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {filteredSpells.map(spell => (
+                    <Card
+                        key={spell.id}
+                        title={spell.name}
+                        description={spell.description}
+                    />
+                    ))}
+                </div>
+            </div>
+        </section>
     )
     }

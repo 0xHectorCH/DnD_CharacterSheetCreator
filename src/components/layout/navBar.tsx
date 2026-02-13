@@ -62,9 +62,9 @@ export default function Navbar({
                 {content.rules}
               </button>
 
-              <div className="absolute left-1/2 top-full z-20 mt-2 hidden 
+              <div className="absolute left-1/2 top-full z-20 hidden 
               -translate-x-1/2 rounded-xl bg-linear-to-b from-[#2a1414] to-[#1a0f0f]
-                border border-red-900/50 shadow-xl group-hover:block"> {/* Cambiar más tarde con js para ser onclick */}
+                border border-red-900/50 shadow-xl group-hover:block"> 
                 <ul className="min-w-45 py-3 text-base">
                   {/* <li>
                     <Link to="/rules/races" className="block px-5 py-2 transition-colors duration-500 hover:text-red-500">

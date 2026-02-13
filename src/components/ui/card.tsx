@@ -14,7 +14,8 @@ export default function Card({
   return (
     <div
       onClick={onClick}
-      className="cursor-pointer rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-200 bg-neutral-800"
+      className="cursor-pointer rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-200 bg-linear-to-r from-[#1a0f0f]
+     via-[#2a1414] to-[#1a0f0f]"
     >
       {image && (
         <div
@@ -24,9 +25,9 @@ export default function Card({
       )}
 
       <div className="p-4">
-        <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
+        <h3 className="text-xl font-bold text-neutral-50 mb-2">{title}</h3>
         {description && (
-          <p className="text-sm text-neutral-300 line-clamp-3">
+          <p className="text-sm text-neutral-50 line-clamp-3">
             {description}
           </p>
         )}
