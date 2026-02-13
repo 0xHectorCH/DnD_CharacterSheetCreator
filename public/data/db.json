@@ -1,0 +1,176 @@
+{
+"classes": [
+    {
+        "id": 1,
+        "name": "Guerrero",
+        "description": "Maestros de las armas y armaduras...",
+        "hitDie": "1d10",
+        "primaryAbility": "Fuerza, Destreza",
+        "savingThrows": ["Fuerza", "Destreza"],
+        "skills": ["Acrobacias", "Trato con animales", "Atletismo", "Historia", "Intuición", "Intimidacion", "Percepción", "Supervivencia"],
+        "numberOfSkills": 2,
+        "armorProficiencies": ["Todas las armaduras", "Escudos"],
+        "weaponProficiencies": ["Armas simples", "Armas marciales"],
+        "levels": [
+            {
+            "level": 1,
+            "features": [
+                {
+                "name": "Estilo de pelea",
+                "description": "Adoptas un estilo particular de lucha como especialidad. Elija una de las siguientes opciones. No puedes elegir una opción de Estilo de lucha más de una vez, incluso si luego puedes volver a elegirla. Tiro con arco (PHB). Obtienes una bonificación de +2 a las tiradas de ataque que realices con armas a distancia. Lucha a ciegas (TCE). Tienes vista ciega con un alcance de 10 pies. Dentro de ese rango, puedes ver efectivamente cualquier cosa que no esté detrás de una cobertura total, incluso si estás cegado o en la oscuridad. Además, puedes ver una criatura invisible dentro de ese rango, a menos que la criatura se oculte con éxito de ti. Defensa (PHB). Mientras llevas armadura, obtienes una bonificación de +1 a la CA. Duelo (PHB). Cuando empuñas un arma cuerpo a cuerpo en una mano y ninguna otra arma, obtienes una bonificación de +2 a las tiradas de daño con esa arma. Gran lucha con armas (PHB). Cuando tiras un 1 o 2 en un dado de daño para un ataque que realizas con un arma cuerpo a cuerpo que estás empuñando con las dos manos, puedes volver a tirar el dado y debes usar la nueva tirada, incluso si la nueva tirada es un 1 o un 2. El arma debe tener la propiedad de dos manos o versátil para que puedas obtener este beneficio. Interceptación (TCE). Cuando una criatura que puedes ver golpea a un objetivo, que no seas tú, a 5 pies de ti con un ataque, puedes usar tu reacción para reducir el daño que recibe el objetivo en 1d10 + tu bonificación de competencia (hasta un mínimo de 0 daño). Debes empuñar un escudo o un arma simple o marcial para utilizar esta reacción. Protección (PHB). Cuando una criatura que puedes ver ataca a un objetivo que no eres tú y que está a 5 pies de ti, puedes usar tu reacción para imponer desventaja en la tirada de ataque. Debes estar empuñando un escudo. Técnica Superior (TCE). Aprendes una maniobra de tu elección entre las disponibles para el arquetipo de Maestro de batalla. Si una maniobra que usas requiere que tu objetivo haga una tirada de salvación para resistir los efectos de la maniobra, la CD de la tirada de salvación es igual a 8 + tu bonificación de competencia + tu modificador de Fuerza o Destreza (tu elección). Obtienes un dado de superioridad, que es un d6 (este dado se suma a cualquier dado de superioridad que tengas de otra fuente). Este dado se utiliza para impulsar tus maniobras. Un dado de superioridad se gasta cuando lo usas. Recuperas tus dados de superioridad gastados cuando terminas un descanso corto o largo. Lucha con armas arrojadizas (TCE). Puedes sacar un arma que tenga la propiedad de arrojar como parte del ataque que realizas con el arma. Además, cuando golpeas con un ataque a distancia usando un arma arrojadiza, obtienes una bonificación de +2 a la tirada de daño. Lucha con dos armas (PHB). Cuando participas en una pelea con dos armas, puedes agregar tu modificador de habilidad al daño del segundo ataque. Luchas Desarmadas (TCE). Tus ataques desarmados pueden causar un daño contundente equivalente a 1d6 + tu modificador de Fuerza en un golpe. Si no estás empuñando ningún arma o escudo cuando haces la tirada de ataque, el d6 se convierte en un d8. Al comienzo de cada uno de tus turnos, puedes infligir 1d4 daños contundentes a una criatura apresada por ti."
+                },
+                {
+                "name": "Fuerzas renovadas",
+                "description": "Tienes una fuente limitada de resistencia a la que puedes recurrir para protegerte del daño. En tu turno, puedes usar una acción adicional para recuperar puntos de vida equivalentes a 1d10 + tu nivel de luchador. Una vez que uses esta función, debes terminar un descanso corto o largo antes de poder usarla nuevamente."
+                }
+            ]
+            },
+            {
+            "level": 2,
+            "features": [
+                {
+                "name": "Oleada de Acción",
+                "description": "A partir del nivel 2, puedes esforzarte más allá de tus límites normales por un momento. En tu turno, puedes realizar una acción adicional. Una vez que uses esta función, debes terminar un descanso corto o largo antes de poder usarla nuevamente. A partir del nivel 17, puedes usarlo dos veces antes de un descanso, pero solo una vez en el mismo turno."
+                }
+            ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Paladin",
+        "description": "Poderosos guerreros capaces de invocar poderes divinos, pero ligados a un juramento...",
+        "hitDie": "1d10",
+        "primaryAbility": "Fuerza, Carisma",
+        "savingThrows": ["Sabiduría", "Carisma"],
+        "skills": ["Atletismo", "Intuición", "Intimidacion", "Medicina", "Persuasion", "Religion"],
+        "numberOfSkills": 2,
+        "armorProficiencies": ["Todas las armaduras", "Escudos"],
+        "weaponProficiencies": ["Armas simples", "Armas marciales"],
+        "levels": [
+            {
+            "level": 1,
+            "features": [
+                {
+                "name": "Imponer las manos",
+                "description": "Tu toque bendito puede curar heridas. Tienes una reserva de poder curativo que se repone cuando tomas un descanso prolongado. Con ese grupo, puedes restaurar una cantidad total de puntos de vida igual a tu nivel de paladín x 5. Como acción, puedes tocar una criatura y extraer poder de la reserva para restaurar una cantidad de puntos de vida a esa criatura, hasta la cantidad máxima restante en tu reserva. Alternativamente, puedes gastar 5 puntos de vida de tu reserva de curación para curar al objetivo de una enfermedad o neutralizar un veneno que lo afecta. Puedes curar múltiples enfermedades y neutralizar múltiples venenos con un solo uso de Imposición de manos, gastando puntos de vida por separado para cada uno. Esta característica no tiene ningún efecto sobre los no-muertos y los constructos."
+                },
+                {
+                "name": "Sentido Divino",
+                "description": "La presencia de un fuerte mal se registra en tus sentidos como un olor nocivo, y un poderoso bien suena como música celestial en tus oídos. Como acción, puedes abrir tu conciencia para detectar tales fuerzas. Hasta el final de tu siguiente turno, conoces la ubicación de cualquier celestial, demonio o no-muerto dentro de 60 pies de ti que no esté detrás de una cobertura total. Conoces el tipo (celestial, demoníaco o no-muerto) de cualquier ser cuya presencia sientes, pero no su identidad (el vampiro Conde Strahd von Zarovich, por ejemplo). Dentro del mismo radio, también detectas la presencia de cualquier lugar u objeto que haya sido consagrado o profanado, como ocurre con el hechizo Hallow. Puedes usar esta función un número de veces igual a 1 + tu modificador de Carisma. Cuando finalizas un descanso prolongado, recuperas todos los usos gastados."
+                }
+            ]
+            },
+            {
+            "level": 2,
+            "features": [
+                {
+                "name": "Lanzamiento de conjuros",
+                "description": "En el nivel 2, has aprendido a recurrir a la magia divina a través de la meditación y la oración para lanzar hechizos como lo hace un clérigo. Preparar y lanzar hechizos La tabla de Paladín muestra cuántos espacios para hechizos tienes para lanzar tus hechizos de paladín. To cast one of your paladin spells of 1st level or higher, you must expend a slot of the spell's level or higher. Recuperas todos los espacios de hechizo gastados cuando terminas un descanso prolongado. Usted prepara la lista de hechizos de paladín que están disponibles para lanzar, eligiendo de la lista de hechizos de paladín. Cuando lo hagas, elige una cantidad de hechizos de paladín igual a tu modificador de Carisma + la mitad de tu nivel de paladín, redondeado hacia abajo (mínimo de un hechizo). Los hechizos deben ser de un nivel para el que tengas espacios para hechizos. Por ejemplo, si eres un paladín de nivel 5, tienes cuatro espacios para hechizos de nivel 1 y dos de nivel 2. Con un Carisma de 14, tu lista de hechizos preparados puede incluir cuatro hechizos de 1.º o 2.º nivel, en cualquier combinación. Si preparas el hechizo de nivel 1 Curar heridas, puedes lanzarlo usando un espacio de nivel 1 o 2. Lanzar el hechizo no lo elimina de tu lista de hechizos preparados. Puedes cambiar tu lista de hechizos preparados cuando termines un descanso prolongado. Preparar una nueva lista de hechizos de paladín requiere tiempo dedicado a la oración y la meditación: al menos 1 minuto por nivel de hechizo para cada hechizo de tu lista. Habilidad de lanzar hechizos El carisma es tu habilidad para lanzar hechizos para tus hechizos de paladín, ya que su poder deriva de la fuerza de tus convicciones. Usas tu Carisma cada vez que un hechizo se refiere a tu habilidad para lanzar hechizos. Además, usas tu modificador de Carisma cuando estableces la CD de la tirada de salvación para un hechizo de paladín que lanzas y cuando haces una tirada de ataque con uno. CD de salvación de hechizos = 8 + tu bonificación de competencia + tu modificador de carisma Modificador de ataque de hechizo = tu bonificación de competencia + tu modificador de carisma Enfoque de lanzamiento de hechizos Puedes usar un símbolo sagrado como foco de lanzamiento de hechizos para tus hechizos de paladín."
+                },
+                {
+                "name": "Estilo de pelea",
+                "description": "A partir del nivel 2, adoptas un estilo particular de lucha como especialidad. Elija una de las siguientes opciones. No puedes elegir una opción de Estilo de lucha más de una vez, incluso si luego puedes volver a elegirla. Bendito Guerrero. Aprendes dos trucos de tu elección de la lista de hechizos de clérigo. Cuentan como hechizos de paladín para ti, y Carisma es tu habilidad para lanzar hechizos para ellos. Siempre que ganes un nivel en esta clase, puedes reemplazar uno de estos trucos con otro truco de la lista de hechizos de clérigo. Lucha a ciegas. Tienes vista ciega con un alcance de 10 pies. Dentro de ese rango, puedes ver efectivamente cualquier cosa que no esté detrás de una cobertura total, incluso si estás cegado o en la oscuridad. Además, puedes ver una criatura invisible dentro de ese rango, a menos que la criatura se oculte con éxito de ti. Defensa. Mientras llevas armadura, obtienes una bonificación de +1 a la CA. Duelo. Cuando empuñas un arma cuerpo a cuerpo en una mano y ninguna otra arma, obtienes una bonificación de +2 a las tiradas de daño con esa arma. Gran lucha con armas. Cuando tiras un 1 o 2 en un dado de daño para un ataque que realizas con un arma cuerpo a cuerpo que estás empuñando con las dos manos, puedes volver a tirar el dado y debes usar la nueva tirada, incluso si la nueva tirada es un 1 o un 2. El arma debe tener la propiedad de dos manos o versátil para que puedas obtener este beneficio. Interceptación. Cuando una criatura que puedes ver golpea a un objetivo, que no seas tú, a 5 pies de ti con un ataque, puedes usar tu reacción para reducir el daño que recibe el objetivo en 1d10 + tu bonificación de competencia (hasta un mínimo de 0 daño). Debes empuñar un escudo o un arma simple o marcial para utilizar esta reacción. Protección. Cuando una criatura que puedes ver ataca a un objetivo que no eres tú y que está a 5 pies de ti, puedes usar tu reacción para imponer desventaja en la tirada de ataque. Debes estar empuñando un escudo."
+                }
+            ]
+            }
+        ]
+    }],
+"races": [
+    {
+    "id": 1,
+    "name": "Humano",
+    "description": "Versátiles y ambiciosos...",
+    "speed": 30,
+    "abilityBonuses": "+1 a todas"
+    },
+    {
+    "id": 2,
+    "name": "Orco",
+    "description": "Feroces guerreros dificiles de matar...",
+    "speed": 30,
+    "abilityBonuses": "+2 a fuerza, +1 a constitución"
+    }
+],
+
+"spells": [
+    {
+    "id": 1,
+    "name": "Rayo Ígneo",
+    "level": 0,
+    "school": "Evocación",
+    "castingTime": "1 acción",
+    "range": "120 pies",
+    "components": "V, S",
+    "duration": "Instantáneo",
+    "concentration": false,
+    "description": "Lanzas una mota de fuego ardiente. Realiza un ataque mágica a distancia contra el objetivo. Con un impacto, el objetivo sufre 1d10 de daño por fuego. Un objeto inflamable alcanzado por este hechizo se enciende si no se usa o se transporta. En niveles superiores. El daño de este hechizo aumenta en 1d10 cuando alcanzas el nivel 5 (2d10), el nivel 11 (3d10) y el nivel 17 (4d10).",
+    "spellLists": "Artificer, Sorcerer, Wizard"
+    },
+    {
+    "id": 2,
+    "name": "Amigos",
+    "level": 0,
+    "school": "Encantamiento",
+    "castingTime": "1 acción",
+    "range": "A ti mismo",
+    "components": "V, S, M (un poco de maquillaje aplicado mientras lanzas el conjuro)",
+    "duration": "1 minuto",
+    "concentration": true,
+    "description": "Mientras dure, tienes ventaja en todas las pruebas de Carisma dirigidas a una criatura de tu elección que no sea hostil hacia ti. Cuando termina el hechizo, la criatura se da cuenta de que usaste magia para influir en su estado de ánimo y se vuelve hostil hacia ti. Una criatura propensa a la violencia podría atacarte. Otra criatura podría buscar retribución de otras maneras (a discreción del DM), dependiendo de la naturaleza de tu interacción con ella.",
+    "spellLists": "Bardo, Brujo, Hechicero, Mago"
+    },
+    {
+    "id": 3,
+    "name": "Curar Heridas",
+    "level": 1,
+    "school": "Evocación",
+    "castingTime": "1 acción",
+    "range": "Contacto",
+    "components": "V, S",
+    "duration": "Instantáneo",
+    "concentration": false,
+    "description": "Una criatura que tocas recupera una cantidad de puntos de vida igual a 1d8 + tu modificador de habilidad de lanzamiento de hechizos. Este hechizo no tiene efecto sobre los muertos vivientes ni sobre los constructos. En niveles superiores. Cuando lanzas este hechizo usando un espacio de hechizo de 2.º nivel o superior, la curación aumenta en 1d8 por cada nivel de espacio por encima del 1.º.",
+    "spellLists": "Artificiero, Bardo, Clerigo, Druida, Montaraz, Paladin"
+    },
+    {
+    "id": 4,
+    "name": "Encantar Persona",
+    "level": 1,
+    "school": "Encantamiento",
+    "castingTime": "1 acción",
+    "range": "30 pies",
+    "components": "V, S",
+    "duration": "1 hora",
+    "concentration": false,
+    "description": "Intentas encantar a un humanoide que puedes ver dentro del alcance. Debe realizar una tirada de salvación de Sabiduría, y lo hace con ventaja si tú o tus compañeros estáis luchando contra él. Si falla la tirada de salvación, quedará encantado hasta que finalice el hechizo o hasta que tú o tus compañeros le hagan algo perjudicial. La criatura encantada te considera un conocido amistoso. Cuando termina el hechizo, la criatura sabe que fue hechizada por ti. En niveles superiores. Cuando lanzas este hechizo usando un espacio de hechizo de nivel 2 o superior, puedes apuntar a una criatura adicional por cada nivel de espacio por encima del 1. Las criaturas deben estar a 30 pies de distancia entre sí cuando las apuntes.",
+    "spellLists": "Bardo, Brujo, Druida, Hechicero, Mago"
+    },
+    {
+    "id": 5,
+    "name": "Ayuda",
+    "level": 2,
+    "school": "Abjuración",
+    "castingTime": "1 acción",
+    "range": "30 pies",
+    "components": "V, S, M (una pequeña tela blanca)",
+    "duration": "8 horas",
+    "concentration": false,
+    "description": "Tu hechizo refuerza a tus aliados con dureza y determinación. Elige hasta tres criaturas dentro del alcance. Los puntos de vida máximos de cada objetivo y los puntos de vida actuales aumentan en 5 durante la duración. En niveles superiores. Cuando lanzas este hechizo usando un espacio de hechizo de 3er nivel o superior, los puntos de golpe de un objetivo aumentan en 5 adicionales por cada nivel de espacio por encima del 2do.",
+    "spellLists": "Artificiero, Bardo, Clerigo, Montaraz, Paladin"
+    },
+    {
+    "id": 6,
+    "name": "Visión Nocturna",
+    "level": 2,
+    "school": "Transmutación",
+    "castingTime": "1 acción",
+    "range": "Contacto",
+    "components": "V, S, M (un pizca de zanahoria seca o una agata)",
+    "duration": "8 horas",
+    "concentration": false,
+    "description": "Tocas a una criatura voluntaria para otorgarle la capacidad de ver en la oscuridad. Mientras dura, esa criatura tiene visión en la oscuridad en un rango de 60 pies.",
+    "spellLists": "Artificiero, Druida, Hechicero, Mago, Montaraz"
+    }
+]
+}
