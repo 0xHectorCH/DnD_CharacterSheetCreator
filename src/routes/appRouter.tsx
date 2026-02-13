@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AuthPage from '../pages/auth';
 import Navbar from '../components/layout/navBar';
 import HomePage from '../pages/home';
+import ClassesPage from '../pages/rules/classes';
+import SpellsPage from '../pages/rules/spells';
 
 export default function AppRouter() {
   return (
@@ -12,10 +14,10 @@ export default function AppRouter() {
         </header>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/auth" element={<AuthPage />} />  {/* ← ÚNICA ruta */}
-        {/* <Route path="/rules/races" element={<RacesPage />} />
+        <Route path="/auth" element={<AuthPage />} />
+        {/* <Route path="/rules/races" element={<RacesPage />} /> */}
         <Route path="/rules/classes" element={<ClassesPage />} />
-        <Route path="/rules/spells" element={<SpellsPage />} /> */}
+        <Route path="/rules/spells" element={<SpellsPage />} />
       </Routes>
     </BrowserRouter>
   );

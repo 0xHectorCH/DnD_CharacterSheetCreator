@@ -52,11 +52,11 @@ export default function Navbar({
               -translate-x-1/2 rounded-xl bg-linear-to-b from-[#2a1414] to-[#1a0f0f]
                 border border-red-900/50 shadow-xl group-hover:block"> {/* Cambiar más tarde con js para ser onclick */}
                 <ul className="min-w-45 py-3 text-base">
-                  <li>
+                  {/* <li>
                     <Link to="/rules/races" className="block px-5 py-2 transition-colors duration-500 hover:text-red-500">
                       {content.races}
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link to="/rules/classes" className="block px-5 py-2 transition-colors duration-500 hover:text-red-500">
                       {content.classes}
@@ -71,9 +71,11 @@ export default function Navbar({
               </div>
             </div>
 
-            <a href="/dice" className="transition-colors duration-500 hover:text-red-600">
+            {/* <a href="/dice" className="transition-colors duration-500 hover:text-red-600">
               {content.dice}
-            </a>
+            </a> 
+            Desarrollar despues de entrega
+            */}
 
             <a href="/about" className="transition-colors duration-500 hover:text-red-600">
               {content.about}
