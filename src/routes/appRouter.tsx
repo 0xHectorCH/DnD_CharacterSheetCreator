@@ -1,4 +1,3 @@
-// src/routes/AppRouter.tsx
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AuthPage from '../pages/auth';
 import Navbar from '../components/layout/navBar';

@@ -30,14 +30,11 @@ export default function SpellsPage() {
         "Warlock",
         "Wizard"
     ]
-    // 1️⃣ State
     const [mode, setMode] = useState<FilterMode>("none")
     const [selectedValue, setSelectedValue] = useState<string | number | null>(null)
 
-    // 2️⃣ Data
     const spells: Spell[] = db.spells
 
-    // 3️⃣ Derived data
     const filteredSpells = useMemo(() => {
         let result = [...spells]
 
@@ -63,8 +60,6 @@ export default function SpellsPage() {
 
         return result
     }, [mode, selectedValue, spells])
-
-    // ⬇️⬇️⬇️ RIGHT HERE. Inside the component.
 
     if (mode === "none") {
         return (

@@ -1,4 +1,3 @@
-//Importaremos el navbar en prácticamente todos los views. Esta es la versión española.
 import { navConfig } from "../../configs/navBar_config"
 import { Link, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
@@ -104,7 +103,7 @@ export default function Navbar({
             {/* Language selector */}
             {/* <div className="relative group">
               <button className="transition-colors duration-500 hover:text-red-600">
-                🌍
+                Idioma
               </button>
               //gestionar idiomas mas tarde
               <div className="absolute right-0 top-full z-20 mt-3 hidden
