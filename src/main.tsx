@@ -1,16 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import Navbar from './components/layout/navBar';
-import Bienvenida from './components/ui/bienvenida';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.tsx';
+import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <header>
-      <Navbar/>
-    </header>
-    <main>
-      <Bienvenida/>
-    </main>
+    <App />
   </React.StrictMode>,
-)
+);

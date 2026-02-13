@@ -1,9 +1,10 @@
 //Importaremos el navbar en prácticamente todos los views. Esta es la versión española.
 import { navConfig } from "../../configs/navBar_config"
+import { Link } from "react-router-dom"
 
 type Language = "en" | "es"
 
-interface NavbarProps {
+interface NavbarProps { 
   lang?: Language
   onLanguageChange?: (lang: Language) => void
 }
@@ -34,9 +35,9 @@ export default function Navbar({
 
           {/* Links centrales */}
           <div className="flex items-center gap-10 text-white text-lg tracking-wide">
-            <a href="/" className="transition-colors duration-500 hover:text-red-600">
+            <Link to="/" className="transition-colors duration-500 hover:text-red-600">
               {content.home}
-            </a>
+            </Link>
 
             {/* Link invisible */}
             {/* <a href="/character-sheets">{content.characterSheets}</a> */}
@@ -52,19 +53,19 @@ export default function Navbar({
                 border border-red-900/50 shadow-xl group-hover:block"> {/* Cambiar más tarde con js para ser onclick */}
                 <ul className="min-w-45 py-3 text-base">
                   <li>
-                    <a href="/rules/races" className="block px-5 py-2 transition-colors duration-500 hover:text-red-500">
+                    <Link to="/rules/races" className="block px-5 py-2 transition-colors duration-500 hover:text-red-500">
                       {content.races}
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="/rules/classes" className="block px-5 py-2 transition-colors duration-500 hover:text-red-500">
+                    <Link to="/rules/classes" className="block px-5 py-2 transition-colors duration-500 hover:text-red-500">
                       {content.classes}
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="/rules/spells" className="block px-5 py-2 transition-colors duration-500 hover:text-red-500">
+                    <Link to="/rules/spells" className="block px-5 py-2 transition-colors duration-500 hover:text-red-500">
                       {content.spells}
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -109,12 +110,10 @@ export default function Navbar({
             </div>
 
             {/* Sign in */}
-            <a
-              href="/sign-in"
-              className=" rounded-lg border border-red-700 px-4 py-1.5
+            <Link to="/auth?auth=signIn" className=" rounded-lg border border-red-700 px-4 py-1.5
                 transition-all duration-500 hover:bg-red-700 hover:text-white">
               {content.signIn}
-            </a>
+            </Link>
 
           </div>
         </div>
