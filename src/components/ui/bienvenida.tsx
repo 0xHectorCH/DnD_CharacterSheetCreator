@@ -42,14 +42,14 @@ export default function Bienvenida({
           {!isSignedIn ? (
             <>
               <a
-                href="/signin"
+                href="./pages/auth?auth=signIn"
                 className="px-10 py-4 text-lg font-semibold bg-red-700 hover:bg-red-600 transition-all duration-300 rounded-lg shadow-lg hover:scale-105"
               >
                 {content.signIn}
               </a>
 
               <a
-                href="/register"
+                href="./pages/auth?auth=register"
                 className="px-10 py-4 text-lg font-semibold border-2 border-red-700 hover:bg-red-700 transition-all duration-300 rounded-lg shadow-lg hover:scale-105"
               >
                 {content.register}
